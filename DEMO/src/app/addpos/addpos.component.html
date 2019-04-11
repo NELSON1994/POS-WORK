@@ -1,0 +1,35 @@
+
+<div>
+<h1 style="text-align:center">
+        TRACOM PLATFORM
+      </h1>
+      <div class="login">
+        <h2 class="login-header">ADDING P.O.S</h2>
+        <form  class="login-container" [formGroup]="posForm">
+      
+                <label><b>POS SERIAL NUMBER  :</b></label>
+            <input type="text"  formControlName="serialnumber" name="serialnumber" class="form-control" id="serialnumber" placeholder="SERIAL NUMBER"  required/>
+         
+         <label><b>NAME OF OWNER   :</b></label>
+            <input type="text"  formControlName="owner" name="owner" class="form-control" id="owner" placeholder="NAME OF OWNER"  required/>
+         
+            <label><b>OWNERS CONTACT   :</b></label>
+            <input type="text" formControlName="owner" name="contact" class="form-control" id="contact" placeholder="OWNER'S CONTACT" required />
+          
+            <label><b>MANUFACTURER   :</b></label>
+              <input type="text" placeholder="INGENICO" value="INGENICO" formControlName="manufacturer" name="owner" class="form-control" id="manufacturer" readonly required>
+      
+          <b><label>DATE STAMP   :</label></b>
+          <input type="date" formControlName="date" name="date" class="form-control" id="date"  required/>
+      
+          <p>
+            <button class="btn btn-succees" (click)="createPos()">ADD P.O.S</button> 
+      
+          </p>
+          <p><a routerLink="/dashboard" routerLinkActive="active"><button class="btn btn-success"><b>MAIN DASHBOARD</b></button></a></p>
+      
+        </form>
+      
+      </div>
+      </div>
+      

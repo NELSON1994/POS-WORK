@@ -1,0 +1,17 @@
+<h1 style="text-align:center">
+        TRACOM PLATFORM
+      </h1>
+      <div class="login">
+        <h2 class="login-header">Log in</h2>
+        <form class="login-container" [formGroup]="loginForm">
+          <label><b>USERNAME     :</b></label>
+          <input type="text" placeholder="USERNAME" formControlName="username">
+          <label><b>PASSWORD    :</b></label>
+          <input type="password" placeholder="PASSWORD" formControlName="password">
+          <p>
+            <button class="btn btn-success" (click)="login()">LOG IN</button>
+          </p>
+          <p><button><a routerLink="/register" routerLinkActive="active"><b>REGISTER</b></a></button></p>
+        </form>
+      </div>
+      

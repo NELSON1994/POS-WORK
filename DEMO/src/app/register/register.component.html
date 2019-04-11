@@ -1,0 +1,39 @@
+
+    <h1 style="text-align:center">
+    TRACOM PLATFORM
+  </h1>
+  <div class="login">
+    <h2 class="login-header">SIGN UP</h2>
+    <form class="login-container" [formGroup]="registerForm" >
+        <label><b>FULL NAME     :</b></label>
+     
+        <input type="text" placeholder="FULL NAME" formControlName="firstname">
+   
+  
+      
+      <label><b>EMAIL ADDRESS    :</b></label>
+     
+        <input type="email" placeholder="EMAIL ADDRESS" formControlName="email">
+     
+  
+      <label><b>PHONE NUMBER    :</b></label>
+     
+        <input type="text" placeholder="PHONE NUMBER" formControlName="phone">
+    
+     <label><b>USERNAME      :</b></label>
+     
+        <input type="text" placeholder="USERNAME" formControlName="username">
+      <label><b>PASSWORD     :</b></label>
+     
+        <input type="password" placeholder="PASSWORD" formControlName="password">
+      <label><b>CONFIRM PASSWORD    :</b></label>
+     
+        <input type="password" placeholder="CONFIRM PASSWORD" formControlName="conpassword">
+      <p>
+        <input type="submit" value="REGISTER" (onClick)="register()"/>
+  
+      </p>
+      <p><a routerLink="/login" routerLinkActive="active"><button class="btn btn-success"><b>LOGIN</b></button></a></p>
+    </form>
+  </div>
+  

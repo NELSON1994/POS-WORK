@@ -1,0 +1,44 @@
+
+<h2>P.O.S SALESS</h2>
+<p><a routerLink="/dashboard" routerLinkActive="active"><button class="btn btn-success"><b>MAIN DASHBOARD</b></button></a></p>
+<form #posForm="ngForm">
+<table>
+  <tr>
+
+<td><input type="text" placeholder="SERIAL NUMBER" id="serialnumber"    class="form-control" 
+  [(ngModel)]="model.serialnumber"
+  name="serialnumber"
+  #serialnumber="ngModel" required></td>
+<td><input type="text" placeholder="AMOUNT" id="amount"    class="form-control" 
+  [(ngModel)]="model.amount"
+  name="amount"
+  #amount="ngModel" required></td>
+<td><input type="text" placeholder="QUANTITY" id="quantity"    class="form-control" 
+  [(ngModel)]="model.quantity"
+  name="quantity"
+  #quantity="ngModel" required></td>
+<td><button  (click)="addPosSales()">  ADD </button></td>
+</tr>
+
+</table>
+</form>
+<table datatable id="possalestables" [dtTrigger]="dtTrigger">
+  <thead>
+
+    <tr>
+      <th>SERIAL NUMBER</th>
+      <th>AMOUNT</th>
+      <th>QUANTITY</th>
+      <th>ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let t of pos | async">
+      <td>{{t.serialnumber}}</td>
+      <td>{{t.amount}}</td>
+      <td>{{t.quantity}}</td>
+      <td><div><button  (click)="deletePosSales(t)">DELETE</button></div></td>
+    </tr>
+   
+  </tbody>
+</table>

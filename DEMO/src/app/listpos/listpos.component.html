@@ -1,0 +1,37 @@
+<h1 style="text-align:center">
+    TRACOM PLATFORM
+  </h1>
+  <div class="login">
+    <h2 class="login-header"> LIST OF P.O.S </h2>
+  
+   <!--<form class="login-container" >-->
+
+  <div class="nn" *ngIf='message'>{{message}}</div>
+<table datatable [dtOptions]="dtOptions" id="possalestables" class="table table-bordered table-stripped">
+  <tr>
+    <th>id</th>
+    <th>serial number</th>
+    <th>owner</th>
+    <th>contact</th>
+    <th>manufacturer</th>
+    <th>date</th>
+    <th style="background-color: cadetblue">ACTION</th>
+    <th style="background-color: aqua">ACTION</th>
+
+    
+    
+  </tr>
+  <tr *ngFor="let p of pos">
+      <td>{{p.id}}</td>   
+      <td>{{p.serialnumber}}</td>
+      <td>{{p.owner}}</td>
+      <td>{{p.contact}}</td>
+      <td>{{p.manufacturer}}</td>
+      <td>{{p.date | date}}</td>
+      <td><button style="background-color: cadetblue" (click)="updatePos()">update</button></td>
+      <td><button style="background-color: aqua" (click)="deletePos()">delete</button></td>
+  </tr>
+</table>
+<p><a routerLink="/dashboard" routerLinkActive="active"><button class="btn btn-success"><b>MAIN DASHBOARD</b></button></a></p>
+<!--</form>-->
+</div>
